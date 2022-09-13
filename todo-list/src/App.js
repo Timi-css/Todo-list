@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { useState, useEffect } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
@@ -37,12 +37,22 @@ function App() {
     );
   }
 
+  function removeTodo(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>ToDo List</p>
+        <div className="header-image"></div>
+        <h1>ToDo List</h1>
         <TodoForm addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} />
+        <TodoList
+          todos={todos}
+          toggleComplete={toggleComplete}
+          removeTodo={removeTodo}
+        />
+        <span className="copyright">@2022 TIMI ALL RIGHTS RESERVED</span>
       </header>
     </div>
   );

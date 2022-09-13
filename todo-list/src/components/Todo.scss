@@ -1,0 +1,43 @@
+.form-div {
+  // background-color: #fff;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid #63bb80;
+
+  @media screen and (max-width: 390px) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1.6rem;
+    width: 20rem;
+  }
+  .task-input {
+    width: 20rem;
+    height: 1rem;
+    justify-content: center;
+    outline: none;
+    border: none;
+  }
+  .cancel-task {
+    width: 4rem;
+    height: 1.8rem;
+    background-color: #63bb80;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+
+    &:hover {
+      background-color: #202d31;
+      border: 2px solid #63bb80;
+      color: #fff;
+    }
+  }
+  li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+}
